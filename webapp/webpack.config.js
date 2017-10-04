@@ -3,7 +3,6 @@ const path = require('path');
 
 module.exports = () => {
     return {
-				context: __dirname,
         entry: {
             main: './main.ts'
         },
@@ -19,7 +18,7 @@ module.exports = () => {
                 {
                     test: /\.ts$/,
                     loaders: [
-                        'awesome-typescript-loader?{configFileName: "webapp/tsconfig.json"}',
+                        'awesome-typescript-loader',
                         'angular2-template-loader'
                     ]
                 },
@@ -29,7 +28,7 @@ module.exports = () => {
                 }
             ]
         },
-        devtool: 'inline-source-map',
+        devtool: 'inline-source-map'
 				plugins: [
 					new webpack.ContextReplacementPlugin(
 					  /(.+)?angular(\\|\/)core(.+)?/,
