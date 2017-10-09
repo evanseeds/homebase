@@ -7,8 +7,10 @@ module.exports = function (config) {
     ],
     exclude: [
     ],
-    preprocessors: {
+		preprocessors: {
+      'test.js': ['webpack', 'sourcemap']
     },
+    webpack: require('./webpack.config')({env: 'test'}),
     reporters: ['progress'],
     port: 9876,
     colors: true,
