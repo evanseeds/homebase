@@ -11,7 +11,7 @@ module.exports = () => {
             filename: '[name].bundle.js'
         },
         resolve: {
-            extensions: ['.js', '.ts', '.html']
+            extensions: ['.js', '.ts']
         },
         module: {
             rules: [
@@ -24,7 +24,7 @@ module.exports = () => {
                 },
                 {
                     test: /\.html$/,
-                    loader: 'raw-loader'
+                    loader: 'html-loader'
                 }
             ]
         },

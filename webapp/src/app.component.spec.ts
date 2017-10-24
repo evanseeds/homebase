@@ -16,6 +16,6 @@ describe('AppComponent', () => {
 	it('works well', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const el = fixture.debugElement.nativeElement as HTMLElement;
-    expect(el.querySelector('h1').textContent).toBe('Welcome to your Homebase');
+    expect(el.querySelector('h1').textContent).toBe('Homebase');
   }));
 });
